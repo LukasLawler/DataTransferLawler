@@ -25,7 +25,7 @@
             @foreach (Country country in Model.Countries)
             {
                 <li class="list-inline-item">
-                    <form asp-action="Details" method="post">
+                    <form asp-action="Details" asp-route-id="@country.CountryID">
                         <button class="bg-white border-0" type="submit">
                             <img src="~/images/@country.CountryFlag" width=100 alt="@country.Name" title="@country.Name | @country.Game.Name | @country.Sport.Name" />
                         </button>
